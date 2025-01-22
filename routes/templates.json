@@ -1,1 +1,54 @@
-[]
+[
+    {
+        "element": "nav",
+        "name": "nav",
+        "style": "margin-inline: auto; max-width: 1110px; width: 100%;",
+        "children": [
+            {
+                "element": "div",
+                "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px;",
+                "children": [
+                    {
+                        "element": "a",
+                        "attributes": {
+                            "href": "./"
+                        },
+                        "children": [
+                            {
+                                "element": "img",
+                                "attributes": {
+                                    "src": "./static/images/logo.svg"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "element": "ul",
+                        "style": "align-items: center; box-sizing: border-box; display: flex; list-style: none; margin: 0; padding: 0;",
+                        "blueprint": {
+                            "element": "li",
+                            "style": "margin-left: cwrapArray[cwrapOmit, 61px, 51px];",
+                            "count": "3",
+                            "children": [
+                                {
+                                    "element": "a",
+                                    "text": "cwrapArray[Portfolio,About Us,Contact]",
+                                    "style": "color: #7D828F; font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
+                                    "extend": [
+                                        {
+                                            "extension": ":hover",
+                                            "style": "color: #1B1D23;"
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "href": "cwrapArray[#,#,#]"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
