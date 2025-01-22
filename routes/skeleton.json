@@ -53,33 +53,146 @@
     },
     {
       "element": "main",
-      "attributes": {
-        "class": "embla"
-      },
       "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
       "children": [
         {
           "element": "div",
-          "attributes": {
-            "class": "embla__container"
-          },
-          "blueprint": {
-            "count": "4",
-            "element": "div",
-            "style": "background-color: rgba(0,0,0,0.35); display: flex; min-height: 720px; position: relative;",
-            "attributes": {
-              "class": "embla__slide"
-            },
-            "children": [
-              {
-                "element": "img",
-                "style": "position: absolute; z-index: -1;",
-                "attributes": {
-                  "src": "./static/images/home/desktop/image-hero-cwrapArray[paramour,seraph,federal,trinity].jpg"
-                }
+          "style": "position: relative;",
+          "children": [
+            {
+              "element": "div",
+              "style": "bottom: 0; display: flex; left: -80px; max-width: 320px; min-height: 80px; position: absolute; width: 100%; z-index: 1;",
+              "blueprint": {
+                "count": "4",
+                "element": "label",
+                "style": "align-items: center; background-color: #FFFFFF; cursor: pointer; display: flex; justify-content: center; max-width: 80px; min-height: 80px; width: 100%;",
+                "extend": [
+                  {
+                    "extension": ":has(input:checked)",
+                    "style": "background-color: #1B1D23; color: #FFFFFF;"
+                  },
+                  {
+                    "extension": ":has(input:checked) > span",
+                    "style": "color: #FFFFFF;"
+                  }
+                ],
+                "children": [
+                  {
+                    "element": "input",
+                    "style": "cursor: pointer; opacity: 0; position: absolute;",
+                    "attributes": {
+                      "type": "radio",
+                      "checked": "cwrapArray[,cwrapOmit,cwrapOmit,cwrapOmit]",
+                      "name": "hero-input"
+                    }
+                  },
+                  {
+                    "element": "span",
+                    "style": "color: #7D828F; font-size: 18px; font-weight: bold; line-height: 25px; position: absolute;",
+                    "text": "0cwrapIndex+1"
+                  }
+                ]
               }
-            ]
-          }
+            },
+            {
+              "element": "div",
+              "attributes": {
+                "class": "embla"
+              },
+              "children": [
+                {
+                  "element": "div",
+                  "attributes": {
+                    "class": "embla__container"
+                  },
+                  "blueprint": {
+                    "count": "4",
+                    "element": "div",
+                    "style": "background-color: rgba(0,0,0,0.35); cursor: grab; display: flex; min-height: 720px; position: relative;",
+                    "extend": [
+                      {
+                        "extension": ":active",
+                        "style": "cursor: grabbing;"
+                      }
+                    ],
+                    "attributes": {
+                      "class": "embla__slide"
+                    },
+                    "children": [
+                      {
+                        "element": "div",
+                        "style": "display: flex; flex-direction: column; gap: 41px; margin: 186px 0 0 190px; max-width: 544px;",
+                        "children": [
+                          {
+                            "element": "section",
+                            "style": "display: flex; flex-direction: column; gap: 10px;",
+                            "children": [
+                              {
+                                "element": "h2",
+                                "style": "color: #FFFFFF; font-size: 96px; font-weight: bold; letter-spacing: -2px; line-height: 80px; margin: 0;",
+                                "text": "cwrapGlobal[home.hero.cwrapIndex.title]"
+                              },
+                              {
+                                "element": "p",
+                                "style": "color: #FFFFFF; font-size: 18px; font-weight: medium; line-height: 24px; margin: 0; max-width: 445px;",
+                                "text": "cwrapGlobal[home.hero.cwrapIndex.description]"
+                              }
+                            ]
+                          },
+                          {
+                            "element": "a",
+                            "style": "align-items: center; background-color: #1B1D23; cursor: pointer; display: flex; gap: 24px; justify-content: center; max-width: 252px; min-height: 72px; width: 100%;",
+                            "children": [
+                              {
+                                "element": "span",
+                                "text": "See Our Portfolio",
+                                "style": "color: #FFFFFF;"
+                              },
+                              {
+                                "element": "svg",
+                                "style": "stroke: #FFFFFF;",
+                                "attributes": {
+                                  "xmlns": "http://www.w3.org/2000/svg",
+                                  "width": "26",
+                                  "height": "20"
+                                },
+                                "children": [
+                                  {
+                                    "element": "g",
+                                    "attributes": {
+                                      "fill": "none",
+                                      "fill-rule": "evenodd",
+                                      "stroke-width": "2"
+                                    },
+                                    "children": [
+                                      {
+                                        "element": "path",
+                                        "attributes": {
+                                          "d": "M15 1l9 9-9 9M0 10h24"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "element": "img",
+                        "style": "position: absolute; z-index: -1;",
+                        "attributes": {
+                          "src": "./static/images/home/desktop/image-hero-cwrapArray[paramour,seraph,federal,trinity].jpg",
+                          "alt": "Hero image"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
