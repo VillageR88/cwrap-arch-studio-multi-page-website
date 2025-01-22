@@ -87,7 +87,7 @@
       "element": "script",
       "attributes": {
         "type": "module",
-        "src": "./static/scripts/bundle/home.bundle.js"
+        "src": "./static/scripts/home.js"
       }
     }
   ]

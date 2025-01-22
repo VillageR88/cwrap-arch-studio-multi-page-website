@@ -9,12 +9,12 @@ const scriptsDir = path.resolve(
   __dirname,
   isDevelopment ? "dist/static/scripts" : "build/static/scripts"
 );
-const bundleDir = path.resolve(scriptsDir, "bundle");
+const bundleDir = path.resolve(scriptsDir);
 const entry = {};
 
-// Ensure the bundle directory exists
-if (!fs.existsSync(bundleDir)) {
-  fs.mkdirSync(bundleDir, { recursive: true });
+// Ensure the scripts directory exists
+if (!fs.existsSync(scriptsDir)) {
+  fs.mkdirSync(scriptsDir, { recursive: true });
 }
 
 for (const file of fs.readdirSync(scriptsDir)) {
@@ -27,8 +27,8 @@ for (const file of fs.readdirSync(scriptsDir)) {
 module.exports = {
   entry,
   output: {
-    filename: "[name].bundle.js", // [name] will be replaced by the key in the entry object
-    path: bundleDir, // Output in the bundle directory
+    filename: "[name].js", // Keep the original name
+    path: bundleDir, // Output in the scripts directory
   },
   resolve: {
     extensions: [".js"],
