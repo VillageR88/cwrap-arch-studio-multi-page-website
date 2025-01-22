@@ -1377,18 +1377,42 @@ function generateCssSelector(
 }
 
 const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
-if (packageJson.devDependencies?.typescript) {
+const runWebpack = () => {
   exec(
-    `npm run ${isDevelopment ? "compile:dev" : "compile:prod"}`,
+    `npm run ${isDevelopment ? "build:dev" : "build:prod"}`,
     (error, stdout, stderr) => {
       if (error) {
-        console.error(`Error executing npm run: ${error.message}`);
+        console.error(`Error executing Webpack: ${error.message}`);
         return;
       }
       if (stderr) {
         console.error(`stderr: ${stderr}`);
         return;
       }
+      console.log(stdout);
     }
   );
+};
+
+if (packageJson.devDependencies?.typescript) {
+  exec(
+    `npm run ${isDevelopment ? "compile:dev" : "compile:prod"}`,
+    (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error executing npm run: ${error}`);
+        console.error(`Error executing npm run: ${stdout}`);
+        return;
+      }
+      if (stderr) {
+        console.error(`stderr: ${stderr}`);
+        return;
+      }
+      console.log(stdout);
+      // Run Webpack after TypeScript compilation
+      runWebpack();
+    }
+  );
+} else {
+  // Run Webpack directly if TypeScript is not in devDependencies
+  runWebpack();
 }
