@@ -28,11 +28,58 @@
   },
   "fonts": [],
   "element": "body",
-  "style": "background-color: #0D192B; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Outfit', sans-serif, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 24px;",
+  "style": "background-color: white; box-sizing: border-box; display: flex; flex-direction: column; font-family: \"League Spartan\", serif; margin: 0; min-height: 100dvh; padding: 56px 24px;",
   "children": [
     {
-      "element": "cwrap-template",
-      "text": "cwrapTemplate[helloMain]"
+      "element": "nav",
+      "style": "margin-inline: auto; max-width: 1110px; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px;",
+          "children": [
+            {
+              "element": "a",
+              "attributes": {
+                "href": "./"
+              },
+              "children": [
+                {
+                  "element": "img",
+                  "attributes": {
+                    "src": "./static/images/logo.svg"
+                  }
+                }
+              ]
+            },
+            {
+              "element": "ul",
+              "style": "align-items: center; box-sizing: border-box; display: flex; list-style: none; margin: 0; padding: 0;",
+              "blueprint": {
+                "element": "li",
+                "style": "margin-left: cwrapArray[cwrapOmit, 61px, 51px];",
+                "count": "3",
+                "children": [
+                  {
+                    "element": "a",
+                    "text": "cwrapArray[Portfolio,About Us,Contact]",
+                    "style": "color: #7D828F; font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
+                    "extend": [
+                      {
+                        "extension": ":hover",
+                        "style": "color: #1B1D23;"
+                      }
+                    ],
+                    "attributes": {
+                      "href": "cwrapArray[#,#,#]"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
