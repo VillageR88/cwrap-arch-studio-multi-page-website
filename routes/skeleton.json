@@ -28,11 +28,24 @@
   },
   "fonts": [],
   "element": "body",
-  "style": "background-color: #0D192B; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'Outfit', sans-serif, serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 24px;",
+  "style": "background-color: white; box-sizing: border-box; display: flex; flex-direction: column; margin: 0; min-height: 100dvh; padding: 56px 24px;",
   "children": [
     {
-      "element": "cwrap-template",
-      "text": "cwrapTemplate[helloMain]"
+      "element": "nav",
+      "style": "margin-inline: auto; max-width: 1110px; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "children": [
+            {
+              "element": "img",
+              "attributes": {
+                "src": "./static/images/logo.svg"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
