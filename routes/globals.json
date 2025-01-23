@@ -31,6 +31,11 @@
       "name": "@view-transition",
       "type": "custom",
       "style": "navigation: auto;"
+    },
+    {
+      "name": "h2",
+      "type": "element",
+      "style": "font-size: 72px; font-weight: bold; letter-spacing: -2px; line-height: 64px; margin: 0;"
     }
   ],
   "const": {
@@ -57,6 +62,29 @@
         "h1": "Welcome",
         "title": "Welcome to Arch Studio",
         "description": "We have a unique network and skillset to help bring your projects to life. Our small team of highly skilled individuals combined with our large network put us in a strong position to deliver exceptional results.\n\nOver the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings, we create spaces that inspire and delight.\n\nWe work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony the surrounding area to create truly stunning projects that will stand the test of time."
+      },
+      "team": {
+        "title": "Small team, big ideas"
+      },
+      "featured": {
+        "h2": "Featured",
+        "gallery": {
+          "pathBase": "static/images/portfolio",
+          "images": [
+            "image-seraph.jpg",
+            "image-eebox.jpg",
+            "image-federal.jpg",
+            "image-del-sol.jpg",
+            "image-prototype.jpg",
+            "image-228b.jpg",
+            "image-edelweiss.jpg",
+            "image-netcry.jpg",
+            "image-hypers.jpg",
+            "image-sxiv.jpg",
+            "image-trinity.jpg",
+            "image-paramour.jpg"
+          ]
+        }
       }
     }
   }
