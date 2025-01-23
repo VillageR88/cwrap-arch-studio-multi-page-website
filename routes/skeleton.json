@@ -65,8 +65,12 @@
               "blueprint": {
                 "count": "4",
                 "element": "label",
-                "style": "align-items: center; background-color: #FFFFFF; cursor: pointer; display: flex; justify-content: center; max-width: 80px; min-height: 80px; width: 100%;",
+                "style": "align-items: center; background-color: #FFFFFF; cursor: pointer; display: flex; justify-content: center; max-width: 80px; min-height: 80px; transition: 300ms; width: 100%;",
                 "extend": [
+                  {
+                    "extension": ":has(input:hover)",
+                    "style": "background-color: #EEEFF4;"
+                  },
                   {
                     "extension": ":has(input:checked)",
                     "style": "background-color: #1B1D23; color: #FFFFFF;"
@@ -191,6 +195,52 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "align-items: end; display: flex; justify-content: space-between; margin-top: 108px; min-height: 655px; position: relative; width: 100%;",
+          "children": [
+            {
+              "element": "h1",
+              "text": "cwrapGlobal[home.welcome.h1]",
+              "style": "color: #EEEFF4; font-size: 250px; font-weight: bold; letter-spacing: -5px; line-height: 200px; margin: 0; position: absolute; top: 0;"
+            },
+            {
+              "element": "section",
+              "style": "display: flex; flex-direction: column; gap: 43px; margin-left: 189px; max-width: 446px;",
+              "children": [
+                {
+                  "element": "h2",
+                  "text": "cwrapGlobal[home.welcome.title]",
+                  "style": "color: #1B1D23; font-size: 72px; font-weight: bold; letter-spacing: -2px; line-height: 64px; margin: 0;"
+                },
+                {
+                  "element": "p",
+                  "text": "cwrapGlobal[home.welcome.description]",
+                  "style": "color: #60636D; font-size: 18px; font-weight: 500; line-height: 24px; margin: 0; white-space: pre-wrap;"
+                }
+              ]
+            },
+            {
+              "element": "img",
+              "attributes": {
+                "src": "./static/images/home/desktop/image-welcome.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "background-color: rgba(0,0,0,0.5); margin-top: 200px; min-height: 560px; position: relative; width: 100%;",
+          "children": [
+            {
+              "element": "img",
+              "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
+              "attributes": {
+                "src": "./static/images/home/desktop/image-small-team.jpg"
+              }
             }
           ]
         }
