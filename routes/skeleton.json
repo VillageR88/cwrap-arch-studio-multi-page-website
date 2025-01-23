@@ -294,11 +294,17 @@
     },
     {
       "element": "footer",
-      "style": "display: flex; margin-inline: auto; max-width: 1110px; min-height: 200px; width: 100%;",
+      "style": "display: flex; margin-inline: auto; margin-top: auto; max-width: 1110px; min-height: 200px; width: 100%;",
       "children": [
         {
           "element": "div",
-          "style": "background-color: #1B1D23; display: flex; max-width: 200px; width: 100%;"
+          "style": "align-items: center; background-color: #1B1D23; display: flex; justify-content: center; max-width: 200px; width: 100%;",
+          "children": [
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[logo(logoFill=white)]"
+            }
+          ]
         },
         {
           "element": "div",
@@ -306,7 +312,13 @@
           "children": [
             {
               "element": "div",
-              "style": "background-color: #EEEFF4; display: flex; height: 100%; max-width: 784px; position: absolute; width: 100%;"
+              "style": "background-color: #EEEFF4; display: flex; height: 100%; max-width: 784px; position: absolute; width: 100%;",
+              "children": [
+                {
+                  "element": "cwrap-template",
+                  "text": "cwrapTemplate[navigation(margin=0 0 0 85px)]"
+                }
+              ]
             }
           ]
         }
