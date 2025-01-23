@@ -27,6 +27,6 @@
     }
   ],
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body]",
+  "text": "cwrapTemplate[body(prefix=../)]",
   "passover": []
 }

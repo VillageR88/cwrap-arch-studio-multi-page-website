@@ -96,7 +96,7 @@
                     ],
                     "attributes": {
                         "alt": "cwrapArray[Portfolio,About Us,Contact]",
-                        "href": "cwrapArray[#,#,#]"
+                        "href": "cwrapProperty[prefix=./]cwrapArray[portfolio,about-us,contact]"
                     }
                 }
             ]
@@ -106,7 +106,7 @@
         "element": "a",
         "name": "logo",
         "attributes": {
-            "href": "./"
+            "href": "cwrapProperty[prefix=./]"
         },
         "children": [
             {
