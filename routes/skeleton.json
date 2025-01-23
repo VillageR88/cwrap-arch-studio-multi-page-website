@@ -255,7 +255,7 @@
                     "element": "img",
                     "style": "display: flex; position: absolute; width: 100%;",
                     "attributes": {
-                      "src": "./cwrapGlobal[home.featured.gallery.pathBase]/desktop/cwrapGlobal[home.featured.gallery.images.cwrapArray[3,5,4]]"
+                      "src": "./cwrapGlobal[home.featured.gallery.pathBase]/desktop/cwrapGlobal[home.featured.gallery.items.cwrapArray[3,5,4].image]"
                     }
                   },
                   {
@@ -264,22 +264,49 @@
                     "children": [
                       {
                         "element": "section",
-                        "style": "background-color: blue; display: flex; flex-direction: column; height: 64px; margin: auto auto 39px 40px; max-width: 200px; width: 100%;",
+                        "style": "display: flex; flex-direction: column; height: 64px; margin: auto auto 39px 40px; max-width: 200px; width: 100%;",
                         "children": [
                           {
                             "element": "h3",
-                            "text": "XYZ"
+                            "style": "color: #FFFFFF;",
+                            "text": "cwrapGlobal[home.featured.gallery.items.cwrapArray[3,5,4].title]"
                           },
                           {
                             "element": "p",
-                            "text": "xyz"
+                            "style": "color: #FFFFFF; margin: 0; opacity: 0.75;",
+                            "text": "cwrapGlobal[home.featured.gallery.items.cwrapArray[3,5,4].description]"
                           }
                         ]
+                      },
+                      {
+                        "element": "span",
+                        "text": "cwrapArray[1,2,3]",
+                        "style": "color: rgba(255,255,255,0.5); font-size: 250px; font-weight: bold; letter-spacing: -5px; line-height: 200px; position: absolute; right: -16px; top: 45px;"
                       }
                     ]
                   }
                 ]
               }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "footer",
+      "style": "display: flex; margin-inline: auto; max-width: 1110px; min-height: 200px; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "background-color: #1B1D23; display: flex; max-width: 200px; width: 100%;"
+        },
+        {
+          "element": "div",
+          "style": "display: flex; max-width: 910px; position: relative; width: 100%;",
+          "children": [
+            {
+              "element": "div",
+              "style": "background-color: #EEEFF4; display: flex; height: 100%; max-width: 784px; position: absolute; width: 100%;"
             }
           ]
         }
