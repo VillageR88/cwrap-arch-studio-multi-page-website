@@ -27,6 +27,17 @@
     }
   ],
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../)]",
-  "passover": []
+  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit)]",
+  "passover": [
+    {
+      "element": "main",
+      "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
+      "children": [
+        {
+          "element": "cwrap-template",
+          "text": "cwrapTemplate[gallery(prefix=../,span=cwrapOmit,count=12,items=cwrapIndex)]"
+        }
+      ]
+    }
+  ]
 }
