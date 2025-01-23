@@ -1,0 +1,32 @@
+{
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "../favicon.ico",
+        "type": "image/x-icon"
+      }
+    ]
+  },
+  "fonts": [],
+  "classroom": [
+    {
+      "name": "embla",
+      "type": "class",
+      "style": "overflow: hidden;"
+    },
+    {
+      "name": "embla__container",
+      "type": "class",
+      "style": "display: flex;"
+    },
+    {
+      "name": "embla__slide",
+      "type": "class",
+      "style": "flex: 0 0 100%; min-width: 0;"
+    }
+  ],
+  "element": "cwrap-template",
+  "text": "cwrapTemplate[body]",
+  "passover": []
+}
