@@ -35,7 +35,12 @@
     {
       "name": "html",
       "type": "element",
-      "style": "scroll-behavior: smooth;"
+      "style": "overflow-x: clip; scroll-behavior: smooth;"
+    },
+    {
+      "name": "body",
+      "type": "element",
+      "style": "overflow-x: clip; scroll-behavior: smooth;"
     },
     {
       "name": "h1",

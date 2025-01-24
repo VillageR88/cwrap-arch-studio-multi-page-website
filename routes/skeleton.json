@@ -128,7 +128,7 @@
                       },
                       {
                         "element": "img",
-                        "style": "position: absolute; z-index: -1;",
+                        "style": "display: flex; height: 100%; object-fit: cover; position: absolute; width: 100%; z-index: -1;",
                         "attributes": {
                           "src": "./static/images/home/desktop/image-hero-cwrapArray[paramour,seraph,federal,trinity].jpg",
                           "alt": "Hero image"
