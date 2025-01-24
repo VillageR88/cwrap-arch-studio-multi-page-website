@@ -17,6 +17,21 @@
       "name": "placeholder",
       "type": "pseudo::",
       "style": "color: #C8CCD8;"
+    },
+    {
+      "name": "user-invalid::placeholder",
+      "type": "pseudo:",
+      "style": "color: rgba(223, 86, 86, 0.5);"
+    },
+    {
+      "name": "label:has(*:user-invalid:placeholder-shown)::before",
+      "type": "element",
+      "style": "bottom: 17px; color: #DF5656; content: 'Can’t be empty'; font-size: 18px; font-weight: bold; letter-spacing: -0.28px; position: absolute; right: 16px;"
+    },
+    {
+      "name": "label:has(*:user-invalid)::before",
+      "type": "element",
+      "style": "bottom: 17px; color: #DF5656; content: 'Invalid'; font-size: 18px; font-weight: bold; letter-spacing: -0.28px; position: absolute; right: 16px;"
     }
   ],
   "element": "cwrap-template",
@@ -125,21 +140,31 @@
                     "style": "display: flex; margin-top: cwrapArray[cwrapOmit,22px,40px]; min-height: cwrapArray[61,61,120]px;",
                     "children": [
                       {
-                        "element": "cwrapArray[input,input,textarea]",
-                        "style": "border: none; border-bottom: #1B1D23 solid 1px; box-sizing: border-box; color: #1B1D23; display: flex; font-family: \"League Spartan\", serif; font-size: 20px; font-weight: bold; letter-spacing: -0.31px; outline: none; padding-inline: 33px; resize: none; width: 100%;",
-                        "extend": [
+                        "element": "label",
+                        "style": "display: flex; position: relative; transition: 300ms; width: 100%;",
+                        "children": [
                           {
-                            "extension": ":user-invalid",
-                            "style": "border-bottom: 1px solid #F67E7E; color: #F67E7E;"
+                            "element": "cwrapArray[input,input,textarea]",
+                            "style": "border: none; border-bottom: #1B1D23 solid 1px; box-sizing: border-box; color: #1B1D23; display: flex; font-family: \"League Spartan\", serif; font-size: 20px; font-weight: bold; letter-spacing: -0.31px; outline: none; padding-inline: 33px; resize: none; width: 100%;",
+                            "extend": [
+                              {
+                                "extension": ":user-invalid",
+                                "style": "border-bottom: 1px solid rgba(223, 86, 86, 1); color: rgba(223, 86, 86, 1);"
+                              },
+                              {
+                                "extension": ":focus",
+                                "style": "border-bottom-width: 3px; margin-bottom: -2px;"
+                              }
+                            ],
+                            "attributes": {
+                              "id": "cwrapGlobal[connect.inputs.cwrapIndex.id]",
+                              "placeholder": "cwrapArray[Name,Email,Message]",
+                              "autocomplete": "cwrapArray[name,email,cwrapOmit]",
+                              "pattern": "cwrapGlobal[connect.inputs.cwrapArray[0,1,cwrapOmit].pattern]",
+                              "required": ""
+                            }
                           }
-                        ],
-                        "attributes": {
-                          "id": "cwrapGlobal[connect.inputs.cwrapIndex.id]",
-                          "placeholder": "cwrapArray[Name,Email,Message]",
-                          "autocomplete": "cwrapArray[name,email,cwrapOmit]",
-                          "pattern": "cwrapGlobal[connect.inputs.cwrapArray[0,1,cwrapOmit].pattern]",
-                          "required": ""
-                        }
+                        ]
                       }
                     ]
                   }
