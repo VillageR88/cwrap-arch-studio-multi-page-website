@@ -57,11 +57,26 @@
     {
         "element": "nav",
         "name": "nav",
-        "style": "margin-inline: auto; max-width: 1110px; width: 100%;",
+        "style": "margin-inline: auto; max-width: 1110px; width: 100%; position: relative;",
         "children": [
             {
                 "element": "div",
-                "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px;",
+                "style": "position: absolute; left: -77px; display: flex; align-items: center; writing-mode: vertical-rl; gap:48px; white-space: nowrap;",
+                "children": [
+                    {
+                        "element": "div",
+                        "style": "width: 1px; height:104px; border-left: 1px solid #C8CCD8;"
+                    },
+                    {
+                        "element": "span",
+                        "style": "color: #C8CCD8; font-weight: 500; font-size: 18px; line-height: 24px; letter-spacing: 18px;",
+                        "text": "cwrapProperty[routeTitle=ROUTE TITLE]"
+                    }
+                ]
+            },
+            {
+                "element": "div",
+                "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px; ",
                 "children": [
                     {
                         "element": "cwrap-template",

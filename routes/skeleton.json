@@ -26,7 +26,7 @@
     }
   ],
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body]",
+  "text": "cwrapTemplate[body(routeTitle=HOME)]",
   "passover": [
     {
       "element": "main",
