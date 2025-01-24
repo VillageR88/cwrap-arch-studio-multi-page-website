@@ -195,7 +195,7 @@
                     "children": [
                         {
                             "element": "section",
-                            "style": "display: flex; flex-direction: column; height: 64px; margin: auto auto 39px 40px; max-width: 200px; width: 100%;",
+                            "style": "display: flex; flex-direction: column; margin: auto 40px 39px 40px; width: 100%;",
                             "children": [
                                 {
                                     "element": "h3",

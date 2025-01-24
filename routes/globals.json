@@ -40,7 +40,7 @@
     {
       "name": "h3",
       "type": "element",
-      "style": "font-size: 32px; font-weight: 40px; line-height: 40px; margin: 0;"
+      "style": "font-size: 32px; font-weight: bold; line-height: 40px; margin: 0;"
     },
     {
       "name": "p",
