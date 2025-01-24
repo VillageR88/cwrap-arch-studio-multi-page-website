@@ -89,14 +89,12 @@ loadTemplates();
  * Creates a DOM element from the provided JSON object and adds it to the preview document (iframe).
  *
  * @param {JsonObject} jsonObj - The JSON object representing the element.
- * @param {boolean} [isInitialLoad] - Flag indicating if this is the initial load.
  * @param {number} [blueprintElementCounter]
  * @param {Map} [properties]
  * @returns {HTMLElement} - The created DOM element.
  */
 function createElementFromJson(
   jsonObj,
-  isInitialLoad = undefined,
   blueprintElementCounter = undefined,
   properties = new Map(), // Ensure properties is always initialized as a Map if not provided
   omit = []
@@ -133,7 +131,6 @@ function createElementFromJson(
     for (const child of jsonObjCopy.children) {
       const childElement = createElementFromJson(
         child,
-        isInitialLoad,
         blueprintElementCounter,
         properties,
         omit
@@ -158,20 +155,8 @@ function createElementFromJson(
     element = document.createElement(jsonObjCopy.element);
   }
 
-  let selectedJsonObj = jsonObjCopy;
-
-  function setJsonObjToEnumItem() {
-    for (const enumItem of jsonObjCopy.enum) {
-      if (blueprintElementCounter === Number(enumItem.nth)) {
-        selectedJsonObj = enumItem;
-        return false;
-      }
-    }
-    return true;
-  }
-
+  const selectedJsonObj = jsonObjCopy;
   const originalText = selectedJsonObj.text || jsonObjCopy.text;
-
   element.cwrapText = originalText ?? "";
 
   if (
@@ -246,7 +231,6 @@ function createElementFromJson(
         if (templateElement) {
           const clonedTemplateElement = createElementFromJson(
             templateElement,
-            undefined,
             undefined,
             propMap,
             jsonObjCopy?.omit || omit || []
@@ -340,7 +324,6 @@ function createElementFromJson(
       cookedJson = replacePlaceholdersCwrapIndex(cookedJson, i);
       const blueprintElement = createElementFromJson(
         cookedJson,
-        isInitialLoad,
         i + 1,
         properties,
         omit
@@ -357,7 +340,6 @@ function createElementFromJson(
     for (const child of jsonObjCopy.children) {
       const childElement = createElementFromJson(
         child,
-        isInitialLoad,
         blueprintElementCounter,
         properties,
         omit
@@ -377,7 +359,6 @@ function createElementFromJson(
       for (const childJson of jsonObjCopy.passover) {
         const childElement = createElementFromJson(
           childJson,
-          isInitialLoad,
           blueprintElementCounter,
           properties,
           omit

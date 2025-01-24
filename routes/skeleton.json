@@ -222,7 +222,7 @@
             },
             {
               "element": "cwrap-template",
-              "text": "cwrapTemplate[gallery(items=cwrapArray[3,5,4])]"
+              "text": "cwrapTemplate[gallery(items=cwrapArray[3 cwrapBreak 5 cwrapBreak 4])]"
             }
           ]
         }
