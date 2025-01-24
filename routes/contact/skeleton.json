@@ -238,6 +238,9 @@
                       "style": "background-color: #60636D;"
                     }
                   ],
+                  "attributes": {
+                    "aria-label": "Submit form"
+                  },
                   "children": [
                     {
                       "element": "cwrap-template",

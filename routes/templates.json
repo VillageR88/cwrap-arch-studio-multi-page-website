@@ -87,7 +87,7 @@
                 {
                     "element": "a",
                     "text": "cwrapArray[Portfolio,About Us,Contact]",
-                    "style": "color: #7D828F; font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
+                    "style": "color: rgb(100, 105, 118); font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
                     "extend": [
                         {
                             "extension": ":hover",
@@ -106,6 +106,7 @@
         "element": "a",
         "name": "logo",
         "attributes": {
+            "aria-label": "Company Logo",
             "href": "cwrapProperty[prefix=./]"
         },
         "children": [
@@ -194,6 +195,7 @@
                     "element": "img",
                     "style": "display: flex; position: absolute; width: 100%;",
                     "attributes": {
+                        "alt": "cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].title]",
                         "src": "cwrapProperty[prefix=./]cwrapGlobal[home.featured.gallery.pathBase]/desktop/cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].image]"
                     }
                 },
@@ -240,6 +242,7 @@
                         "element": "img",
                         "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
                         "attributes": {
+                            "alt": "hero image",
                             "src": "../cwrapGlobal[cwrapProperty[heroSource=about-us].pathBase]/desktop/cwrapGlobal[cwrapProperty[heroSource=about-us].hero.image]"
                         }
                     }

@@ -46,7 +46,8 @@
             {
               "element": "img",
               "attributes": {
-                "src": "../cwrapGlobal[about-us.heritage.image]"
+                "src": "../cwrapGlobal[about-us.heritage.image]",
+                "alt": "cwrapGlobal[about-us.heritage.title] image"
               }
             }
           ]
@@ -71,7 +72,8 @@
                   {
                     "element": "img",
                     "attributes": {
-                      "src": "../cwrapGlobal[about-us.leaders.gallery.cwrapIndex.src]"
+                      "src": "../cwrapGlobal[about-us.leaders.gallery.cwrapIndex.src]",
+                      "alt": "cwrapGlobal[about-us.leaders.gallery.cwrapIndex.title] image"
                     }
                   },
                   {
