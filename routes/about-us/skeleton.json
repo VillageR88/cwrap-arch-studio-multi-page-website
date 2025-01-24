@@ -16,52 +16,82 @@
       "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
       "children": [
         {
+          "element": "cwrap-template",
+          "text": "cwrapTemplate[commonHero]"
+        },
+        {
           "element": "div",
-          "style": "min-height: 720px; position: relative; width: 100%;",
+          "style": "display: flex; justify-content: space-between; margin-top: 200px;",
           "children": [
             {
               "element": "div",
-              "style": "background-color: rgba(0,0,0,0.35); display: flex; max-width: 635px; min-height: 720px; position: relative;",
-              "children": [
-                {
-                  "element": "img",
-                  "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
-                  "attributes": {
-                    "src": "../cwrapGlobal[about-us.pathBase]/desktop/cwrapGlobal[about-us.hero.image]"
-                  }
-                }
-              ]
-            },
-            {
-              "element": "h1",
-              "text": "cwrapGlobal[about-us.hero.h1]",
-              "style": "color: #EEEFF4; position: absolute; right: 0; top: 130px; z-index: 1;"
-            },
-            {
-              "element": "div",
-              "style": "background-color: #FFFFFF; bottom: 0; display: flex; max-width: 628px; min-height: 503px; position: absolute; right: 0; width: 100%;",
+              "style": "display: flex; flex-direction: column; max-width: 446px; white-space: pre-wrap;",
               "children": [
                 {
                   "element": "div",
-                  "style": "margin: auto auto 2px 182px; max-width: 446px;",
-                  "children": [
-                    {
-                      "element": "div",
-                      "style": "border-bottom: #C8CCD8 solid 1px; width: 65px;"
-                    },
-                    {
-                      "element": "h2",
-                      "text": "cwrapGlobal[about-us.hero.title]",
-                      "style": "color: #1B1D23; margin-top: 58px;"
-                    },
-                    {
-                      "element": "p",
-                      "text": "cwrapGlobal[about-us.hero.description]",
-                      "style": "color: #60636D; margin-top: 49px;"
-                    }
-                  ]
+                  "style": "border-bottom: #C8CCD8 solid 1px; width: 65px;"
+                },
+                {
+                  "element": "h2",
+                  "text": "cwrapGlobal[about-us.heritage.title]",
+                  "style": "color: #1B1D23; margin-top: 83px;"
+                },
+                {
+                  "element": "p",
+                  "text": "cwrapGlobal[about-us.heritage.description]",
+                  "style": "color: #60636D; margin-top: 51px;"
                 }
               ]
+            },
+            {
+              "element": "img",
+              "attributes": {
+                "src": "../cwrapGlobal[about-us.heritage.image]"
+              }
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "display: flex; justify-content: space-between; margin-block: 200px 159px;",
+          "children": [
+            {
+              "element": "h2",
+              "style": "color: #1B1D23; white-space: pre-wrap;",
+              "text": "cwrapGlobal[about-us.leaders.title]"
+            },
+            {
+              "element": "div",
+              "style": "display: flex; flex-wrap: wrap; gap: 63px 30px; max-width: 730px;",
+              "blueprint": {
+                "count": "4",
+                "element": "div",
+                "style": "display: flex; flex-direction: column; gap: 15px;",
+                "children": [
+                  {
+                    "element": "img",
+                    "attributes": {
+                      "src": "../cwrapGlobal[about-us.leaders.gallery.cwrapIndex.src]"
+                    }
+                  },
+                  {
+                    "element": "section",
+                    "style": "display: flex; flex-direction: column;",
+                    "children": [
+                      {
+                        "element": "h3",
+                        "style": "color: #1B1D23;",
+                        "text": "cwrapGlobal[about-us.leaders.gallery.cwrapIndex.title]"
+                      },
+                      {
+                        "element": "p",
+                        "style": "color: rgba(27, 29, 35, 0.75);",
+                        "text": "cwrapGlobal[about-us.leaders.gallery.cwrapIndex.description]"
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           ]
         }

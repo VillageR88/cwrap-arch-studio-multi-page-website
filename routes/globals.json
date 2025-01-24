@@ -153,10 +153,40 @@
     "about-us": {
       "pathBase": "static/images/about",
       "hero": {
-        "image": "image-hero.jpg",
+        "image": "image-herocwrapBeautiful.jpg",
         "h1": "About",
         "title": "Your team of professionals",
         "description": "Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings."
+      },
+      "heritage": {
+        "title": "Our\nHeritage",
+        "description": "Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.\n\nSpecializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs.\n\nOur small team of world-class professionals provides input on every project.",
+        "image": "static/images/about/desktop/image-heritage.jpg"
+      },
+      "leaders": {
+        "title": "The\nLeaders",
+        "gallery": [
+          {
+            "src": "static/images/about/desktop/avatar-jake.jpg",
+            "title": "Jason Statham",
+            "description": "Chief Architect"
+          },
+          {
+            "src": "static/images/about/desktop/avatar-thompson.jpg",
+            "title": "Dennis Haysbert",
+            "description": "Head of Finance"
+          },
+          {
+            "src": "static/images/about/desktop/avatar-jackson.jpg",
+            "title": "Ryan Gosling",
+            "description": "Lead Designer"
+          },
+          {
+            "src": "static/images/about/desktop/avatar-maria.jpg",
+            "title": "Vanessa Paradis",
+            "description": "Senior Architect"
+          }
+        ]
       }
     }
   }
