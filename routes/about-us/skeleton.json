@@ -9,7 +9,7 @@
     ]
   },
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit,routeTitle=ABOUT US)]",
+  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit,routeTitle=ABOUT US,navClass=cwrapArray[cwrapOmit cwrapBreak enroute cwrapBreak cwrapOmit])]",
   "passover": [
     {
       "element": "main",

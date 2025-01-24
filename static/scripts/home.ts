@@ -25,3 +25,12 @@ emblaApi.on("select", () => {
 			.childNodes[0] as HTMLInputElement
 	).click();
 });
+
+setTimeout(() => {
+	for (let i = 0; i < slidesContainer.childNodes.length; i++) {
+		(slidesContainer.childNodes[i].childNodes[0] as HTMLInputElement).checked =
+			false;
+	}
+	(slidesContainer.childNodes[0].childNodes[0] as HTMLInputElement).checked =
+		true;
+}, 20);

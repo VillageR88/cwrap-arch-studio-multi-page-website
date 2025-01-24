@@ -85,7 +85,7 @@
     }
   ],
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit,script=script,scriptSource=contact.js,routeTitle=CONTACT)]",
+  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit,script=script,scriptSource=contact.js,routeTitle=CONTACT,navClass=cwrapArray[cwrapOmit cwrapBreak cwrapOmit cwrapBreak enroute])]",
   "passover": [
     {
       "element": "main",
