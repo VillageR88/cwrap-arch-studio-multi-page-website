@@ -145,29 +145,34 @@
                 "style": "color: #FFFFFF; font-weight: bold; font-size: 18px; line-height: 25px;"
             },
             {
-                "element": "svg",
-                "style": "stroke: #FFFFFF;",
+                "element": "cwrap-template",
+                "text": "cwrapTemplate[arrow]"
+            }
+        ]
+    },
+    {
+        "element": "svg",
+        "name": "arrow",
+        "style": "stroke: cwrapProperty[stroke=#FFFFFF];",
+        "attributes": {
+            "xmlns": "http://www.w3.org/2000/svg",
+            "width": "26",
+            "height": "20"
+        },
+        "children": [
+            {
+                "element": "g",
                 "attributes": {
-                    "xmlns": "http://www.w3.org/2000/svg",
-                    "width": "26",
-                    "height": "20"
+                    "fill": "none",
+                    "fill-rule": "evenodd",
+                    "stroke-width": "2"
                 },
                 "children": [
                     {
-                        "element": "g",
+                        "element": "path",
                         "attributes": {
-                            "fill": "none",
-                            "fill-rule": "evenodd",
-                            "stroke-width": "2"
-                        },
-                        "children": [
-                            {
-                                "element": "path",
-                                "attributes": {
-                                    "d": "M15 1l9 9-9 9M0 10h24"
-                                }
-                            }
-                        ]
+                            "d": "M15 1l9 9-9 9M0 10h24"
+                        }
                     }
                 ]
             }
@@ -232,14 +237,14 @@
                         "element": "img",
                         "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
                         "attributes": {
-                            "src": "../cwrapGlobal[about-us.pathBase]/desktop/cwrapGlobal[about-us.hero.image]"
+                            "src": "../cwrapGlobal[cwrapProperty[heroSource=about-us].pathBase]/desktop/cwrapGlobal[cwrapProperty[heroSource=about-us].hero.image]"
                         }
                     }
                 ]
             },
             {
                 "element": "h1",
-                "text": "cwrapGlobal[about-us.hero.h1]",
+                "text": "cwrapGlobal[cwrapProperty[heroSource=about-us].hero.h1]",
                 "style": "color: #EEEFF4; position: absolute; right: 0; top: 130px; z-index: 1;"
             },
             {
@@ -256,12 +261,12 @@
                             },
                             {
                                 "element": "h2",
-                                "text": "cwrapGlobal[about-us.hero.title]",
+                                "text": "cwrapGlobal[cwrapProperty[heroSource=about-us].hero.title]",
                                 "style": "color: #1B1D23; margin-top: 58px;"
                             },
                             {
                                 "element": "p",
-                                "text": "cwrapGlobal[about-us.hero.description]",
+                                "text": "cwrapGlobal[cwrapProperty[heroSource=about-us].hero.description]",
                                 "style": "color: #60636D; margin-top: 49px;"
                             }
                         ]
