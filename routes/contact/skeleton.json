@@ -14,6 +14,56 @@
   },
   "classroom": [
     {
+      "name": "input:-webkit-autofill",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold;"
+    },
+    {
+      "name": "input:-webkit-autofill:hover",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold;"
+    },
+    {
+      "name": "input:-webkit-autofill:focus",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold;"
+    },
+    {
+      "name": "input:-webkit-autofill:active",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold;"
+    },
+    {
+      "name": "input::-webkit-autofill",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::-webkit-autofill:hover",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::-webkit-autofill:focus",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::-webkit-autofill:active",
+      "type": "element",
+      "style": "-webkit-box-shadow: 0 0 0 300px white inset; -webkit-text-fill-color: #1B1D23; font-weight: bold; transition: background-color 500s ease-in-out 0s;"
+    },
+    {
+      "name": "input::before",
+      "type": "element",
+      "style": "background-color: white; content: ''; display: block; font-weight: bold; height: 100%; opacity: 0.6; width: 100%;"
+    },
+    {
+      "name": "input::after",
+      "type": "element",
+      "style": "background-color: white; content: ''; display: block; font-weight: bold; height: 100%; opacity: 0.6; width: 100%;"
+    },
+    {
       "name": "placeholder",
       "type": "pseudo::",
       "style": "color: #C8CCD8;"
