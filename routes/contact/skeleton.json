@@ -127,10 +127,18 @@
                       {
                         "element": "cwrapArray[input,input,textarea]",
                         "style": "border: none; border-bottom: #1B1D23 solid 1px; box-sizing: border-box; color: #1B1D23; display: flex; font-family: \"League Spartan\", serif; font-size: 20px; font-weight: bold; letter-spacing: -0.31px; outline: none; padding-inline: 33px; resize: none; width: 100%;",
+                        "extend": [
+                          {
+                            "extension": ":user-invalid",
+                            "style": "border-bottom: 1px solid #F67E7E; color: #F67E7E;"
+                          }
+                        ],
                         "attributes": {
                           "id": "cwrapGlobal[connect.inputs.cwrapIndex.id]",
                           "placeholder": "cwrapArray[Name,Email,Message]",
-                          "autocomplete": "cwrapArray[name,email,cwrapOmit]"
+                          "autocomplete": "cwrapArray[name,email,cwrapOmit]",
+                          "pattern": "cwrapGlobal[connect.inputs.cwrapArray[0,1,cwrapOmit].pattern]",
+                          "required": ""
                         }
                       }
                     ]
