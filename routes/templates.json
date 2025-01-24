@@ -2,7 +2,7 @@
     {
         "element": "body",
         "name": "body",
-        "style": "background-color: white; box-sizing: border-box; display: flex; flex-direction: column; font-family: \"League Spartan\", serif; margin: 0; min-height: 100dvh; padding: 0 24px 0 24px;",
+        "style": "background-color: white; box-sizing: border-box; display: flex; flex-direction: column; font-family: \"League Spartan\", serif; margin: 0; min-height: 100dvh; padding: 0 97px 0 97px;",
         "children": [
             {
                 "element": "cwrap-template",
@@ -13,7 +13,7 @@
             },
             {
                 "element": "footer",
-                "style": "display: flex; align-self: center; margin-top: auto; max-width: 1110px; min-height: 200px; width: calc(100% + 48px);",
+                "style": "display: flex; align-self: center; margin-top: auto; max-width: 1110px; min-height: 200px; width: calc(100% + 97px * 2);",
                 "children": [
                     {
                         "element": "div",
@@ -59,15 +59,15 @@
     {
         "element": "nav",
         "name": "nav",
-        "style": "margin-inline: auto; max-width: calc(1440px - 63*2px); width: 100%; position: relative; padding-top: 56px;",
+        "style": "margin-inline: auto; max-width: calc(1110px + 51px * 2); width: 100%; position: relative; padding-top: 56px;",
         "children": [
             {
                 "element": "div",
-                "style": "position: absolute; top: 0; display: flex; align-items: center; writing-mode: vertical-rl; gap: 48px; white-space: nowrap;",
+                "style": "position: absolute; top: 0; display: flex; margin-left: -59px; align-items: center; writing-mode: vertical-rl; gap: 48px; white-space: nowrap;",
                 "children": [
                     {
                         "element": "div",
-                        "style": "width: 1px; height:104px; border-left: 1px solid #C8CCD8;"
+                        "style": "width: 1px; height: 104px; border-left: 1px solid #C8CCD8;"
                     },
                     {
                         "element": "span",
@@ -78,7 +78,7 @@
             },
             {
                 "element": "div",
-                "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px; max-width: 1110px; margin-inline: auto; padding-inline: 48px;",
+                "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px; max-width: 1110px; margin-inline: auto;",
                 "children": [
                     {
                         "element": "cwrap-template",
@@ -207,7 +207,7 @@
     {
         "element": "ul",
         "name": "gallery",
-        "style": "box-sizing: border-box; display: flex; gap: 30px; flex-wrap:wrap; list-style: none; margin: 0; padding: 0; width: 100%;",
+        "style": "box-sizing: border-box; display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; width: 100%;",
         "blueprint": {
             "count": "cwrapProperty[count=3]",
             "element": "li",
@@ -215,7 +215,7 @@
             "children": [
                 {
                     "element": "img",
-                    "style": "display: flex; position: absolute; width: 100%;",
+                    "style": "display: flex; position: absolute; width: 100%; height: 100%; object-fit: cover;",
                     "attributes": {
                         "alt": "cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].title]",
                         "src": "cwrapProperty[prefix=./]cwrapGlobal[home.featured.gallery.pathBase]/desktop/cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].image]"

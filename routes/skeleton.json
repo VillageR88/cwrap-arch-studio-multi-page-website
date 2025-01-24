@@ -168,6 +168,7 @@
             },
             {
               "element": "img",
+              "style": "display: flex; max-width: 350px; object-fit: cover; width: 100%;",
               "attributes": {
                 "src": "./static/images/home/desktop/image-welcome.jpg",
                 "alt": "Welcome image"
@@ -181,7 +182,7 @@
           "children": [
             {
               "element": "img",
-              "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
+              "style": "display: flex; height: 100%; object-fit: cover; position: absolute; width: 100%; z-index: -1;",
               "attributes": {
                 "src": "./static/images/home/desktop/image-small-team.jpg",
                 "alt": "Small team image"
