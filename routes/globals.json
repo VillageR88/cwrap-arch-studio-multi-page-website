@@ -33,6 +33,11 @@
       "style": "navigation: auto;"
     },
     {
+      "name": "html",
+      "type": "element",
+      "style": "scroll-behavior: smooth;"
+    },
+    {
       "name": "h1",
       "type": "element",
       "style": "font-size: 250px; font-weight: bold; letter-spacing: -5px; line-height: 200px; margin: 0;"
@@ -218,6 +223,20 @@
           }
         ]
       }
+    },
+    "connect": {
+      "title": "Connect\nwith us",
+      "inputs": [
+        {
+          "id": "name"
+        },
+        {
+          "id": "email"
+        },
+        {
+          "id": "message"
+        }
+      ]
     }
   }
 }
