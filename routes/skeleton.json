@@ -122,7 +122,7 @@
                           },
                           {
                             "element": "cwrap-template",
-                            "text": "cwrapTemplate[boxLink(title=See Our Portfolio,maxWidth=252px)]"
+                            "text": "cwrapTemplate[boxLink(title=See Our Portfolio,maxWidth=252px,link=portfolio/)]"
                           }
                         ]
                       },
@@ -196,7 +196,7 @@
                 },
                 {
                   "element": "cwrap-template",
-                  "text": "cwrapTemplate[boxLink(title=About Us,maxWidth=187px)]"
+                  "text": "cwrapTemplate[boxLink(title=About Us,maxWidth=187px,link=about-us/)]"
                 }
               ]
             }
@@ -216,7 +216,7 @@
                 },
                 {
                   "element": "cwrap-template",
-                  "text": "cwrapTemplate[boxLink(title=See All,maxWidth=169px)]"
+                  "text": "cwrapTemplate[boxLink(title=See All,maxWidth=169px,link=portfolio/)]"
                 }
               ]
             },

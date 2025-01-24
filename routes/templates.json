@@ -35,7 +35,7 @@
                             },
                             {
                                 "element": "cwrap-template",
-                                "text": "cwrapTemplate[boxLink(title=See Our Portfolio,maxWidth=252px)]"
+                                "text": "cwrapTemplate[boxLink(title=See Our Portfolio,maxWidth=252px,link=portfolio/)]"
                             },
                             {
                                 "element": "div",
@@ -96,7 +96,7 @@
                     ],
                     "attributes": {
                         "alt": "cwrapArray[Portfolio,About Us,Contact]",
-                        "href": "cwrapProperty[prefix=./]cwrapArray[portfolio,about-us,contact]"
+                        "href": "cwrapProperty[prefix=./]cwrapArray[portfolio/,about-us/,contact/]"
                     }
                 }
             ]
@@ -131,13 +131,16 @@
     {
         "element": "a",
         "name": "boxLink",
-        "style": "transition: 250ms; align-items: center; background-color: #1B1D23; cursor: pointer; display: flex; gap: 24px; justify-content: center; max-width: cwrapProperty[maxWidth=cwrapOmit]; min-height: 72px; width: 100%;",
+        "style": "transition: 250ms; align-items: center; background-color: #1B1D23; cursor: pointer; display: flex; gap: 24px; justify-content: center; max-width: cwrapProperty[maxWidth=cwrapOmit]; min-height: 72px; width: 100%; text-decoration: none;",
         "extend": [
             {
                 "extension": ":hover",
                 "style": "background-color: #60636D;"
             }
         ],
+        "attributes": {
+            "href": "cwrapProperty[prefix=./]cwrapProperty[link=#]"
+        },
         "children": [
             {
                 "element": "span",
