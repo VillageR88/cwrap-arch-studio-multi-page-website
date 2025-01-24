@@ -144,6 +144,11 @@
           ]
         }
       }
+    },
+    "about-us": {
+      "hero": {
+        "image": "static/images/about/desktop/image-hero.jpg"
+      }
     }
   }
 }

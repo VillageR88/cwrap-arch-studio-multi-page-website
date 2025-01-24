@@ -1,0 +1,40 @@
+{
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "../favicon.ico",
+        "type": "image/x-icon"
+      }
+    ]
+  },
+  "element": "cwrap-template",
+  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit)]",
+  "passover": [
+    {
+      "element": "main",
+      "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
+      "children": [
+        {
+          "element": "div",
+          "style": "min-height: 720px; width: 100%;",
+          "children": [
+            {
+              "element": "div",
+              "style": "background-color: rgba(0,0,0,0.35); display: flex; max-width: 635px; min-height: 720px; position: relative;",
+              "children": [
+                {
+                  "element": "img",
+                  "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
+                  "attributes": {
+                    "src": "../cwrapGlobal[about-us.hero.image]"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

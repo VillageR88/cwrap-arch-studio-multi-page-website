@@ -8,30 +8,12 @@
       }
     ]
   },
-  "fonts": [],
-  "classroom": [
-    {
-      "name": "embla",
-      "type": "class",
-      "style": "overflow: hidden;"
-    },
-    {
-      "name": "embla__container",
-      "type": "class",
-      "style": "display: flex;"
-    },
-    {
-      "name": "embla__slide",
-      "type": "class",
-      "style": "flex: 0 0 100%; min-width: 0;"
-    }
-  ],
   "element": "cwrap-template",
   "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit)]",
   "passover": [
     {
       "element": "main",
-      "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
+      "style": "display: flex; flex-direction: column; margin-block: 56px 160px; margin-inline: auto; max-width: 1110px; width: 100%;",
       "children": [
         {
           "element": "cwrap-template",
