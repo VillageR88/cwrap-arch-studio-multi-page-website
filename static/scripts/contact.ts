@@ -42,9 +42,13 @@ L.marker([35.6, -83.8], { icon: blackIcon })
 `);
 
 mapLink1?.addEventListener("click", () => {
-	map.setView([32.7767, -96.797], 10);
+	map.flyTo([32.14, -96.2], 10, {
+		duration: 2,
+	});
 });
 
 mapLink2?.addEventListener("click", () => {
-	map.setView([35.9606, -83.9207], 10);
+	map.flyTo([35.6, -83.8], 10, {
+		duration: 2,
+	});
 });
