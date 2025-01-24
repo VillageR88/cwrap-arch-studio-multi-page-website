@@ -5,11 +5,15 @@
         "rel": "shortcut icon",
         "href": "../favicon.ico",
         "type": "image/x-icon"
+      },
+      {
+        "rel": "stylesheet",
+        "href": "https://unpkg.com/leaflet/dist/leaflet.css"
       }
     ]
   },
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit)]",
+  "text": "cwrapTemplate[body(prefix=../,script=cwrapOmit,script=script,scriptSource=contact.js)]",
   "passover": [
     {
       "element": "main",
@@ -80,6 +84,17 @@
               ]
             }
           ]
+        },
+        {
+          "element": "div",
+          "style": "border: 0; height: 100%; margin-top: 199px; min-height: 560px; width: 100%;",
+          "attributes": {
+            "id": "map"
+          }
+        },
+        {
+          "element": "div",
+          "style": "margin-block: 160px;"
         }
       ]
     }

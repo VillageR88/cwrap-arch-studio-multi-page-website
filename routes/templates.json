@@ -49,7 +49,7 @@
                 "element": "cwrapProperty[script=script]",
                 "attributes": {
                     "type": "module",
-                    "src": "./static/scripts/home.js"
+                    "src": "cwrapProperty[prefix=./]static/scripts/cwrapProperty[scriptSource=home.js]"
                 }
             }
         ]
