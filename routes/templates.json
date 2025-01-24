@@ -87,7 +87,7 @@
                 {
                     "element": "a",
                     "text": "cwrapArray[Portfolio,About Us,Contact]",
-                    "style": "color: rgb(100, 105, 118); font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
+                    "style": "color: #7D828F; font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
                     "extend": [
                         {
                             "extension": ":hover",
@@ -251,7 +251,7 @@
             {
                 "element": "h1",
                 "text": "cwrapGlobal[cwrapProperty[heroSource=about-us].hero.h1]",
-                "style": "color: #EEEFF4; position: absolute; right: 0; top: 130px; z-index: 1; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);"
+                "style": "color: #EEEFF4; position: absolute; right: 0; top: 130px; z-index: 1;"
             },
             {
                 "element": "div",
