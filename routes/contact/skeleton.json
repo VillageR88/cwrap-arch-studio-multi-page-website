@@ -146,7 +146,17 @@
                           {
                             "element": "span",
                             "text": "View on Map",
-                            "style": "font-size: 18px; font-weight: bold; line-height: 25px;"
+                            "style": "font-size: 18px; font-weight: bold; line-height: 25px; position: relative;",
+                            "extend": [
+                              {
+                                "extension": "::before",
+                                "style": "background: #1B1D23; bottom: 6px; content: \"\"; height: 1px; left: 50%; position: absolute; transition: width 300ms ease-in-out, left 300ms ease-in-out; width: 0%; z-index: -1;"
+                              },
+                              {
+                                "extension": ":hover::before",
+                                "style": "filter: drop-shadow(0 0 6px white); left: 0; transform: translateX(0) scale(1); width: 100%;"
+                              }
+                            ]
                           },
                           {
                             "element": "cwrap-template",
