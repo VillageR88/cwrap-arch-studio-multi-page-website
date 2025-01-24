@@ -33,6 +33,11 @@
       "style": "navigation: auto;"
     },
     {
+      "name": "h1",
+      "type": "element",
+      "style": "font-size: 250px; font-weight: bold; letter-spacing: -5px; line-height: 200px; margin: 0;"
+    },
+    {
       "name": "h2",
       "type": "element",
       "style": "font-size: 72px; font-weight: bold; letter-spacing: -2px; line-height: 64px; margin: 0;"
@@ -146,8 +151,12 @@
       }
     },
     "about-us": {
+      "pathBase": "static/images/about",
       "hero": {
-        "image": "static/images/about/desktop/image-hero.jpg"
+        "image": "image-hero.jpg",
+        "h1": "About",
+        "title": "Your team of professionals",
+        "description": "Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings."
       }
     }
   }
