@@ -95,7 +95,6 @@ loadTemplates();
  */
 function createElementFromJson(
   jsonObj,
-  blueprintElementCounter = undefined,
   properties = new Map(), // Ensure properties is always initialized as a Map if not provided
   omit = []
 ) {
@@ -129,12 +128,7 @@ function createElementFromJson(
   if (isFragment) {
     const fragment = document.createDocumentFragment();
     for (const child of jsonObjCopy.children) {
-      const childElement = createElementFromJson(
-        child,
-        blueprintElementCounter,
-        properties,
-        omit
-      );
+      const childElement = createElementFromJson(child, properties, omit);
       if (childElement) fragment.appendChild(childElement);
     }
     return fragment;
@@ -231,7 +225,6 @@ function createElementFromJson(
         if (templateElement) {
           const clonedTemplateElement = createElementFromJson(
             templateElement,
-            undefined,
             propMap,
             jsonObjCopy?.omit || omit || []
           ).cloneNode(true);
@@ -300,31 +293,50 @@ function createElementFromJson(
       }
     }
   }
-
   if (jsonObjCopy.blueprint) {
-    let count = jsonObjCopy.blueprint.count;
-    if (typeof count === "string" && count.includes("cwrapProperty")) {
-      const parts = count.split(/(cwrapProperty\[[^\]]+\])/);
-      for (let i = 1; i < parts.length; i++) {
-        if (parts[i].startsWith("cwrapProperty")) {
-          const propertyMatch = parts[i].match(
-            /cwrapProperty\[([^\]=]+)=([^\]]+)\]/
-          );
-          if (propertyMatch) {
-            const [property, defaultValue] = propertyMatch.slice(1);
-            const mapValue = properties?.get(property);
-            count = count.replace(parts[i], mapValue || defaultValue);
+    let blueprintCopy = JSON.parse(JSON.stringify(jsonObjCopy.blueprint));
+
+    const replaceCwrapProperties = (obj) => {
+      if (typeof obj === "string" && obj.includes("cwrapProperty")) {
+        const parts = obj.split(/(cwrapProperty\[[^\]]+\])/);
+        let finalString = "";
+
+        for (const part of parts) {
+          if (part.startsWith("cwrapProperty")) {
+            const propertyMatch = part.match(
+              /cwrapProperty\[([^\]=]+)=([^\]]+)\]/
+            );
+            if (propertyMatch) {
+              const [property, defaultValue] = propertyMatch.slice(1);
+              const mapValue = properties?.get(property);
+              finalString += mapValue || defaultValue;
+            }
+          } else {
+            finalString += part;
           }
         }
+        return finalString;
       }
-    }
+      if (Array.isArray(obj)) {
+        return obj.map(replaceCwrapProperties);
+      }
+      if (typeof obj === "object" && obj !== null) {
+        for (const key in obj) {
+          obj[key] = replaceCwrapProperties(obj[key]);
+        }
+      }
+      return obj;
+    };
+
+    blueprintCopy = replaceCwrapProperties(blueprintCopy);
+
+    let count = blueprintCopy.count;
     count = Number.parseInt(count, 10);
     for (let i = 0; i < count; i++) {
-      let cookedJson = replacePlaceholdersCwrapArray(jsonObjCopy.blueprint, i);
+      let cookedJson = replacePlaceholdersCwrapArray(blueprintCopy, i);
       cookedJson = replacePlaceholdersCwrapIndex(cookedJson, i);
       const blueprintElement = createElementFromJson(
         cookedJson,
-        i + 1,
         properties,
         omit
       );
@@ -338,12 +350,7 @@ function createElementFromJson(
     let spanIndex = 0;
     const spanElements = element.querySelectorAll("span");
     for (const child of jsonObjCopy.children) {
-      const childElement = createElementFromJson(
-        child,
-        blueprintElementCounter,
-        properties,
-        omit
-      );
+      const childElement = createElementFromJson(child, properties, omit);
       if (element.isPlaceholderCarrier && spanElements[spanIndex]) {
         spanElements[spanIndex].replaceWith(childElement);
         spanIndex++;
@@ -357,12 +364,7 @@ function createElementFromJson(
     const passoverElement = element.querySelector("cwrap-passover");
     if (passoverElement) {
       for (const childJson of jsonObjCopy.passover) {
-        const childElement = createElementFromJson(
-          childJson,
-          blueprintElementCounter,
-          properties,
-          omit
-        );
+        const childElement = createElementFromJson(childJson, properties, omit);
         passoverElement.before(childElement);
       }
       passoverElement.remove();
@@ -388,38 +390,6 @@ function copyFile(source, destination) {
         `Error: Could not copy file ${source} to ${destination}`,
         err
       );
-    }
-  });
-}
-
-function copyDirectory(source, destination) {
-  if (!fs.existsSync(destination)) {
-    mkdirp.sync(destination);
-    if (!isDevelopment) console.log(`Created directory ${destination}`);
-  }
-
-  fs.readdir(source, (err, files) => {
-    if (err) {
-      console.error(`Error: Could not open directory ${source}`, err);
-      return;
-    }
-
-    for (const file of files) {
-      const sourcePath = path.join(source, file);
-      const destinationPath = path.join(destination, file);
-
-      fs.stat(sourcePath, (err, stats) => {
-        if (err) {
-          console.error(`Error: Could not stat ${sourcePath}`, err);
-          return;
-        }
-
-        if (stats.isDirectory()) {
-          copyDirectory(sourcePath, destinationPath);
-        } else {
-          copyFile(sourcePath, destinationPath);
-        }
-      });
     }
   });
 }
