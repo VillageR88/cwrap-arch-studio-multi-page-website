@@ -14,6 +14,12 @@
     {
       "element": "main",
       "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "margin-top: 32px;"
+        }
+      ],
       "children": [
         {
           "element": "cwrap-template",

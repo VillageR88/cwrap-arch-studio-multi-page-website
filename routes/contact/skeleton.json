@@ -94,6 +94,10 @@
         {
           "query": "max-width: 1280px",
           "style": "align-items: center;"
+        },
+        {
+          "query": "max-width: 768px",
+          "style": "margin-top: 32px;"
         }
       ],
       "children": [
