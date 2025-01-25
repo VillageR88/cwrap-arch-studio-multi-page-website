@@ -233,7 +233,7 @@
             },
             {
               "query": "max-width: 768px",
-              "style": "margin-top: 71px; max-width: unset;"
+              "style": "margin-top: 71px; max-width: unset; min-height: 367px;"
             }
           ],
           "attributes": {
