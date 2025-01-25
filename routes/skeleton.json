@@ -35,10 +35,28 @@
         {
           "element": "div",
           "style": "position: relative;",
+          "extend": [
+            {
+              "extension": ":hover > div:nth-of-type(1)",
+              "style": "opacity: 1;"
+            }
+          ],
           "children": [
             {
               "element": "div",
-              "style": "bottom: 0; display: flex; left: -80px; max-width: 320px; min-height: 80px; position: absolute; width: 100%; z-index: 1;",
+              "style": "bottom: 0; display: flex; left: -80px; max-width: 320px; min-height: 80px; position: absolute; transition: 300ms; width: 100%; z-index: 1;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "opacity: 0;",
+                  "extend": [
+                    {
+                      "extension": ":hover",
+                      "style": "opacity: 1;"
+                    }
+                  ]
+                }
+              ],
               "blueprint": {
                 "count": "4",
                 "element": "label",
@@ -103,6 +121,12 @@
                       {
                         "element": "div",
                         "style": "display: flex; flex-direction: column; gap: 41px; margin: 186px 0 0 190px; max-width: 544px;",
+                        "mediaQueries": [
+                          {
+                            "query": "max-width: 1280px",
+                            "style": "margin-left: 58px;"
+                          }
+                        ],
                         "children": [
                           {
                             "element": "section",
@@ -144,15 +168,33 @@
         {
           "element": "div",
           "style": "align-items: end; display: flex; justify-content: space-between; margin-top: 108px; min-height: 655px; position: relative; width: 100%;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 1280px",
+              "style": "align-items: start; flex-direction: column; min-height: unset;"
+            }
+          ],
           "children": [
             {
               "element": "h1",
               "text": "cwrapGlobal[home.welcome.h1]",
-              "style": "color: #EEEFF4; position: absolute; top: 0;"
+              "style": "color: #EEEFF4; position: absolute; top: 0; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "position: relative;"
+                }
+              ]
             },
             {
               "element": "section",
-              "style": "display: flex; flex-direction: column; gap: 43px; margin-left: 189px; max-width: 446px;",
+              "style": "display: flex; flex-direction: column; gap: 43px; margin-left: auto; margin-right: 10%; max-width: 446px;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "margin-inline: unset; margin-top: -40px; max-width: 800px;"
+                }
+              ],
               "children": [
                 {
                   "element": "h2",
@@ -169,6 +211,12 @@
             {
               "element": "img",
               "style": "display: flex; max-width: 350px; object-fit: cover; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "display: none;"
+                }
+              ],
               "attributes": {
                 "src": "./static/images/home/desktop/image-welcome.jpg",
                 "alt": "Welcome image"
@@ -191,6 +239,12 @@
             {
               "element": "section",
               "style": "display: flex; flex-direction: column; gap: 27px; margin: 167px auto auto 190px; max-width: 445px; min-height: 225px; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "margin-left: 58px;"
+                }
+              ],
               "children": [
                 {
                   "element": "h2",

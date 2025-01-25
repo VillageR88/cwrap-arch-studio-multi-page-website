@@ -31,7 +31,7 @@
                         "children": [
                             {
                                 "element": "div",
-                                "style": "background-color: #EEEFF4; display: flex; margin-right: -126px; height: 100%; max-width: 784px; width: 100%; z-index: -1; ",
+                                "style": "background-color: #EEEFF4; display: flex; margin-right: -126px; height: 100%; max-width: 784px; width: 100%;",
                                 "children": [
                                     {
                                         "element": "cwrap-template",
@@ -208,18 +208,50 @@
         "element": "ul",
         "name": "gallery",
         "style": "box-sizing: border-box; display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; width: 100%;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 1280px",
+                "style": "flex-direction: column;"
+            }
+        ],
         "blueprint": {
             "count": "cwrapProperty[count=3]",
             "element": "li",
             "style": "align-items: end; display: flex; max-width: 350px; min-height: 560px; position: relative; width: 100%;",
+            "mediaQueries": [
+                {
+                    "query": "max-width: 1280px",
+                    "style": "min-height: 240px; max-width:unset;"
+                }
+            ],
             "children": [
                 {
-                    "element": "img",
-                    "style": "display: flex; position: absolute; width: 100%; height: 100%; object-fit: cover;",
-                    "attributes": {
-                        "alt": "cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].title]",
-                        "src": "cwrapProperty[prefix=./]cwrapGlobal[home.featured.gallery.pathBase]/desktop/cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].image]"
-                    }
+                    "element": "picture",
+                    "style": "display: flex; position: absolute; width: 100%; height: 100%;",
+                    "children": [
+                        {
+                            "element": "source",
+                            "attributes": {
+                                "media": "(max-width: 768px)",
+                                "srcset": "cwrapProperty[prefix=./]cwrapGlobal[home.featured.gallery.pathBase]/mobile/cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].image]"
+                            }
+                        },
+                        {
+                            "element": "source",
+                            "attributes": {
+                                "media": "(max-width: 1280px)",
+                                "srcset": "cwrapProperty[prefix=./]cwrapGlobal[home.featured.gallery.pathBase]/tablet/cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].image]"
+                            }
+                        },
+                        {
+                            "element": "img",
+                            "style": " width: 100%; height: 100%; object-fit: cover; display: flex;",
+                            "attributes": {
+                                "alt": "cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].title]",
+                                "src": "cwrapProperty[prefix=./]cwrapGlobal[home.featured.gallery.pathBase]/desktop/cwrapGlobal[home.featured.gallery.items.cwrapProperty[items=cwrapOmit].image]"
+                            }
+                        }
+                    ]
                 },
                 {
                     "element": "div",
@@ -244,7 +276,13 @@
                         {
                             "element": "cwrapProperty[span=span]",
                             "text": "cwrapArray[1,2,3]",
-                            "style": "color: rgba(255,255,255,0.5); font-size: 250px; font-weight: bold; letter-spacing: -5px; line-height: 200px; position: absolute; right: -16px; top: 45px;"
+                            "style": "color: rgba(255,255,255,0.5); font-size: 250px; font-weight: bold; letter-spacing: -5px; line-height: 200px; position: absolute; right: -16px; top: 45px;",
+                            "mediaQueries": [
+                                {
+                                    "query": "max-width: 1280px",
+                                    "style": "right: 16px; top: 29px;"
+                                }
+                            ]
                         }
                     ]
                 }
