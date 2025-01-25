@@ -22,6 +22,12 @@
         {
           "element": "div",
           "style": "display: flex; justify-content: space-between; margin-top: 200px;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 768px",
+              "style": "margin-top: 0;"
+            }
+          ],
           "children": [
             {
               "element": "div",
@@ -30,6 +36,10 @@
                 {
                   "query": "max-width: 1280px",
                   "style": "margin-inline: auto; max-width: 640px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "margin-inline: unset; padding-inline: 32px;"
                 }
               ],
               "children": [
@@ -71,6 +81,10 @@
             {
               "query": "max-width: 1280px",
               "style": "flex-direction: column; gap: 49px; margin-inline: auto;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "box-sizing: border-box; margin-block: 112px 111px; padding-inline: 32px; width: 100%;"
             }
           ],
           "children": [
@@ -86,6 +100,10 @@
                 {
                   "query": "max-width: 1280px",
                   "style": "max-width: 640px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "display: flex; flex-direction: column; gap: 79px; max-width: 100%; max-width: unset;"
                 }
               ],
               "blueprint": {
@@ -95,6 +113,10 @@
                   {
                     "query": "max-width: 1280px",
                     "style": "max-width: 280px;"
+                  },
+                  {
+                    "query": "max-width: 768px",
+                    "style": "max-width: unset;"
                   }
                 ],
                 "style": "display: flex; flex-direction: column; gap: 15px;",

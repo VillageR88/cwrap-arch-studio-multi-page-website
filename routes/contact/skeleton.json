@@ -108,6 +108,10 @@
             {
               "query": "max-width: 1280px",
               "style": "max-width: 640px;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "box-sizing: border-box; margin-top: unset; max-width: unset; padding-inline: 32px;"
             }
           ],
           "children": [
@@ -137,6 +141,10 @@
                     {
                       "query": "max-width: 1280px",
                       "style": "flex-direction: column;"
+                    },
+                    {
+                      "query": "max-width: 768px",
+                      "style": "gap: 40px;"
                     }
                   ],
                   "blueprint": {
@@ -172,6 +180,10 @@
                           {
                             "query": "max-width: 1280px",
                             "style": "position: absolute; right: 0;"
+                          },
+                          {
+                            "query": "max-width: 768px",
+                            "style": "margin-top: 43px; position: unset;"
                           }
                         ],
                         "attributes": {
@@ -214,6 +226,10 @@
             {
               "query": "max-width: 1280px",
               "style": "max-width: 640px;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "margin-top: 71px; max-width: unset;"
             }
           ],
           "attributes": {
@@ -227,6 +243,10 @@
             {
               "query": "max-width: 1280px",
               "style": "flex-direction: column; max-width: 640px;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "box-sizing: border-box; margin-block: 73px 73px; max-width: unset; padding-inline: 32px;"
             }
           ],
           "children": [
@@ -237,6 +257,10 @@
                 {
                   "query": "max-width: 1280px",
                   "style": "max-width: unset;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "max-width: 200px;"
                 }
               ],
               "text": "cwrapGlobal[connect.title]"

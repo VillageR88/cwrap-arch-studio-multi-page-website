@@ -61,6 +61,10 @@
                       "style": "opacity: 1;"
                     }
                   ]
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "display: none;"
                 }
               ],
               "blueprint": {
@@ -131,6 +135,10 @@
                           {
                             "query": "max-width: 1280px",
                             "style": "margin-left: 58px;"
+                          },
+                          {
+                            "query": "max-width: 768px",
+                            "style": "gap: 83px; margin-inline: 0 auto; max-width: 311px; padding-inline: 32px;"
                           }
                         ],
                         "children": [
@@ -203,19 +211,39 @@
               ]
             },
             {
+              "element": "div",
+              "style": "border-bottom: 1px solid #C8CCD8; display: none; height: 1px; width: 65px;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 768px",
+                  "style": "display: flex;"
+                }
+              ]
+            },
+            {
               "element": "section",
               "style": "display: flex; flex-direction: column; gap: 43px; margin-left: auto; margin-right: 10%; max-width: 446px;",
               "mediaQueries": [
                 {
                   "query": "max-width: 1280px",
                   "style": "margin-inline: auto; margin-top: -40px; max-width: 640px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "margin-top: 69px;"
                 }
               ],
               "children": [
                 {
                   "element": "h2",
                   "text": "cwrapGlobal[home.welcome.title]",
-                  "style": "color: #1B1D23;"
+                  "style": "color: #1B1D23;",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 768px",
+                      "style": "max-width: 311px;"
+                    }
+                  ]
                 },
                 {
                   "element": "p",
@@ -246,7 +274,7 @@
           "mediaQueries": [
             {
               "query": "max-width: 768px",
-              "style": "align-items: center;"
+              "style": "align-items: center; margin-top: 113px;"
             }
           ],
           "children": [

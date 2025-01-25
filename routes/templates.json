@@ -333,6 +333,12 @@
                         {
                             "element": "section",
                             "style": "display: flex; flex-direction: column; margin: auto 40px 39px 40px; width: 100%;",
+                            "mediaQueries": [
+                                {
+                                    "query": "max-width: 768px",
+                                    "style": "margin: auto auto 23px 24px;"
+                                }
+                            ],
                             "children": [
                                 {
                                     "element": "h3",
@@ -354,6 +360,10 @@
                                 {
                                     "query": "max-width: 1280px",
                                     "style": "right: 16px; top: 29px;"
+                                },
+                                {
+                                    "query": "max-width: 768px",
+                                    "style": "display: none;"
                                 }
                             ]
                         }
@@ -366,14 +376,32 @@
         "element": "div",
         "name": "commonHero",
         "style": "min-height: 720px; position: relative; width: 100%;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "min-height: unset; display: flex; flex-direction: column;"
+            }
+        ],
         "children": [
             {
                 "element": "div",
                 "style": "background-color: rgba(0,0,0,0.35); display: flex; max-width: 635px; min-height: 720px; position: relative;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "min-height: 240px; max-width: unset;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "img",
-                        "style": "display: flex; position: absolute; width: 100%; z-index: -1;",
+                        "style": "display: flex; position: absolute; width: 100%; z-index: -1; height: 100%; object-fit: cover;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "max-height: 505px; object-position: top;"
+                            }
+                        ],
                         "attributes": {
                             "alt": "hero image",
                             "src": "../cwrapGlobal[cwrapProperty[heroSource=about-us].pathBase]/desktop/cwrapGlobal[cwrapProperty[heroSource=about-us].hero.image]"
@@ -399,6 +427,10 @@
                     {
                         "query": "max-width: 1280px",
                         "style": "max-width: fit-content; min-height: 431px;"
+                    },
+                    {
+                        "query": "max-width: 768px",
+                        "style": "position: unset; padding-right: 32px; min-height: 334px;"
                     }
                 ],
                 "children": [
@@ -409,17 +441,33 @@
                             {
                                 "query": "max-width: 1280px",
                                 "style": "margin-inline: 59px 0;"
+                            },
+                            {
+                                "query": "max-width: 768px",
+                                "style": "margin-top: -45px; z-index: 2; background-color: #FFFFFF; margin-inline: 0; padding-left: 32px;"
                             }
                         ],
                         "children": [
                             {
                                 "element": "div",
-                                "style": "border-bottom: #C8CCD8 solid 1px; width: 65px;"
+                                "style": "border-bottom: #C8CCD8 solid 1px; width: 65px;",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "display: none;"
+                                    }
+                                ]
                             },
                             {
                                 "element": "h2",
                                 "text": "cwrapGlobal[cwrapProperty[heroSource=about-us].hero.title]",
-                                "style": "color: #1B1D23; margin-top: 58px;"
+                                "style": "color: #1B1D23; margin-top: 58px;",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "word-break: break-word; hyphens: auto;"
+                                    }
+                                ]
                             },
                             {
                                 "element": "p",
