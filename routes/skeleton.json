@@ -31,6 +31,12 @@
     {
       "element": "main",
       "style": "display: flex; flex-direction: column; margin-inline: auto; margin-top: 56px; max-width: 1110px; width: 100%;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "margin-top: 32px;"
+        }
+      ],
       "children": [
         {
           "element": "div",
@@ -135,6 +141,12 @@
                               {
                                 "element": "h2",
                                 "style": "color: #FFFFFF; font-size: 96px; font-weight: bold; letter-spacing: -2px; line-height: 80px; margin: 0;",
+                                "mediaQueries": [
+                                  {
+                                    "query": "max-width: 768px",
+                                    "style": "font-size: 48px; letter-spacing: -1.2px; line-height: 48px;"
+                                  }
+                                ],
                                 "text": "cwrapGlobal[home.hero.cwrapIndex.title]"
                               },
                               {
@@ -172,6 +184,10 @@
             {
               "query": "max-width: 1280px",
               "style": "align-items: start; flex-direction: column; min-height: unset;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "box-sizing: border-box; padding-inline: 32px;"
             }
           ],
           "children": [
@@ -226,7 +242,13 @@
         },
         {
           "element": "div",
-          "style": "background-color: rgba(0,0,0,0.5); margin-top: 200px; min-height: 560px; position: relative; width: 100%;",
+          "style": "background-color: rgba(0,0,0,0.5); display: flex; margin-top: 200px; min-height: 560px; position: relative; width: 100%;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 768px",
+              "style": "align-items: center;"
+            }
+          ],
           "children": [
             {
               "element": "img",
@@ -243,6 +265,10 @@
                 {
                   "query": "max-width: 1280px",
                   "style": "margin-left: 58px;"
+                },
+                {
+                  "query": "max-width: 768px",
+                  "style": "margin-block: unset; max-width: 300px;"
                 }
               ],
               "children": [
@@ -261,11 +287,17 @@
         },
         {
           "element": "div",
+          "mediaQueries": [
+            {
+              "query": "max-width: 768px",
+              "style": "border-box; margin-block: 72px 168px; padding-inline: 32px;"
+            }
+          ],
           "style": "display: flex; flex-direction: column; gap: 64px; margin-block: 200px; min-height: 696px;",
           "children": [
             {
               "element": "div",
-              "style": "align-items: center; display: flex; justify-content: space-between;",
+              "style": "align-items: center; display: flex; justify-content: space-between; position: relative;",
               "children": [
                 {
                   "element": "h2",
@@ -273,7 +305,7 @@
                 },
                 {
                   "element": "cwrap-template",
-                  "text": "cwrapTemplate[boxLink(title=See All,maxWidth=169px,link=portfolio/)]"
+                  "text": "cwrapTemplate[boxLink(title=See All,maxWidth=169px,link=portfolio/,boxLinkA768=position: absolute; z-index: 3; bottom:-1060px; max-width: 100%; left: 0; box-sizing: border-box;)]"
                 }
               ]
             },

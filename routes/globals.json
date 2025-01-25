@@ -50,13 +50,23 @@
         {
           "query": "max-width: 1280px",
           "style": "font-size: 120px; letter-spacing: -3px; line-height: 200px;"
+        },
+        {
+          "query": "max-width: 768px",
+          "style": "display: none;"
         }
       ]
     },
     {
       "name": "h2",
       "type": "element",
-      "style": "font-size: 72px; font-weight: bold; letter-spacing: -2px; line-height: 64px; margin: 0;"
+      "style": "font-size: 72px; font-weight: bold; letter-spacing: -2px; line-height: 64px; margin: 0;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "font-size: 48px; letter-spacing: -1.71px; line-height: 52px;"
+        }
+      ]
     },
     {
       "name": "h3",

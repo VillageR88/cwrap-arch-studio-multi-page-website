@@ -3,10 +3,16 @@
         "element": "body",
         "name": "body",
         "style": "background-color: white; box-sizing: border-box; display: flex; flex-direction: column; font-family: \"League Spartan\", serif; margin: 0; min-height: 100dvh; padding: 0 97px 0 97px;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "padding: 0;"
+            }
+        ],
         "children": [
             {
                 "element": "cwrap-template",
-                "text": "cwrapTemplate[nav]"
+                "text": "cwrapTemplate[nav(768Navigation=display: none)]"
             },
             {
                 "element": "cwrap-passover"
@@ -18,6 +24,10 @@
                     {
                         "query": "max-width: 1280px",
                         "style": "min-height: 110px;"
+                    },
+                    {
+                        "query": "max-width: 768px",
+                        "style": "width: 100%; flex-direction: column; align-items: center;"
                     }
                 ],
                 "children": [
@@ -27,7 +37,11 @@
                         "mediaQueries": [
                             {
                                 "query": "max-width: 1280px",
-                                "style": "max-width: 120px;"
+                                "style": "max-width: 120px; min-height: 120px;"
+                            },
+                            {
+                                "query": "max-width: 768px",
+                                "style": "margin-bottom: -60px; z-index:1;"
                             }
                         ],
                         "children": [
@@ -40,10 +54,22 @@
                     {
                         "element": "div",
                         "style": "align-items: center; display: flex; justify-content: space-between; max-width: 910px; position: relative; width: 100%;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "flex-direction: column; background-color: #EEEFF4;  padding-bottom: 48px;"
+                            }
+                        ],
                         "children": [
                             {
                                 "element": "div",
                                 "style": "background-color: #EEEFF4; display: flex; margin-right: -126px; height: 100%; max-width: 784px; width: 100%;",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "margin-right: unset; justify-content: center; min-height: 263px; align-items: center"
+                                    }
+                                ],
                                 "children": [
                                     {
                                         "element": "cwrap-template",
@@ -72,10 +98,22 @@
         "element": "nav",
         "name": "nav",
         "style": "margin-inline: auto; max-width: calc(1110px + 51px * 2); width: 100%; position: relative; padding-top: 56px;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "padding-top: 32px; padding-inline: 32px;"
+            }
+        ],
         "children": [
             {
                 "element": "div",
                 "style": "position: absolute; top: 0; display: flex; margin-left: -59px; align-items: center; writing-mode: vertical-rl; gap: 48px; white-space: nowrap;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "display: none;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "div",
@@ -112,11 +150,21 @@
             {
                 "query": "max-width: 1280px",
                 "style": "margin: 0 0 0 40px"
+            },
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[768Navigation=flex-direction: column; gap: 32px; margin-top: 62px]; margin-inline: unset;"
             }
         ],
         "blueprint": {
             "element": "li",
             "style": "margin-left: cwrapArray[cwrapOmit, 61px, 51px];",
+            "mediaQueries": [
+                {
+                    "query": "max-width: 768px",
+                    "style": "margin-left: unset;"
+                }
+            ],
             "count": "3",
             "children": [
                 {
@@ -173,7 +221,13 @@
     {
         "element": "a",
         "name": "boxLink",
-        "style": "transition: 250ms; align-items: center; background-color: #1B1D23; cursor: pointer; display: flex; gap: 24px; justify-content: center; max-width: cwrapProperty[maxWidth=cwrapOmit]; min-height: 72px; width: 100%; text-decoration: none;",
+        "style": "transition: background-color 250ms, color 200ms; align-items: center; background-color: #1B1D23; cursor: pointer; display: flex; gap: 24px; justify-content: center; max-width: cwrapProperty[maxWidth=cwrapOmit]; min-height: 72px; width: 100%; text-decoration: none;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[boxLinkA768=cwrapOmit]"
+            }
+        ],
         "extend": [
             {
                 "extension": ":hover",

@@ -15,6 +15,15 @@ const blackIconSvg = `
 </svg>
 `;
 
+window.addEventListener("resize", () => {
+	const currentZoom = map.getZoom();
+	if (window.innerWidth <= 768) {
+		if (currentZoom === 6) map.setZoom(5);
+	} else {
+		if (currentZoom === 5) map.setZoom(6);
+	}
+});
+
 const blackIcon = new L.DivIcon({
 	html: blackIconSvg,
 	className: "custom-icon",
