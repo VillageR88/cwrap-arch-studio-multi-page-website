@@ -45,11 +45,11 @@
                         "children": [
                             {
                                 "element": "div",
-                                "style": "margin-block: 39px 42px; margin-inline: 48px; display: flex; flex-direction: column; ",
+                                "style": "margin-block: auto; margin-inline: 48px; display: flex; flex-direction: column; ",
                                 "children": [
                                     {
                                         "element": "cwrap-template",
-                                        "text": "cwrapTemplate[navigation(768Navigation=margin:0; flex-direction: column; width: fit-content; gap: 17px; navAlternate=color: red;)]"
+                                        "text": "cwrapTemplate[navigation(768Navigation=margin:0; flex-direction: column; width: fit-content; gap: 32px; align-items: start, navAlternate=color: #1B1D23; font-size: 32px)]"
                                     }
                                 ]
                             }
@@ -175,7 +175,17 @@
             },
             {
                 "element": "div",
-                "style": "align-items: center; display: flex; justify-content: space-between; max-width: 504px; max-width: 1110px; margin-inline: auto;",
+                "style": "align-items: center; display: flex; gap: 94px; max-width: 504px; max-width: 1110px; margin-inline: auto;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 1280px",
+                        "style": "gap: 38px;"
+                    },
+                    {
+                        "query": "max-width: 768px",
+                        "style": "justify-content: space-between; gap: 94px;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "cwrap-template",
@@ -264,7 +274,7 @@
                 {
                     "element": "a",
                     "text": "cwrapArray[Portfolio,About Us,Contact]",
-                    "style": "cwrapProperty[navAlternate=color: #7D828F; font-size: 18px;]; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
+                    "style": "cwrapProperty[navAlternate=color: #7D828F; font-size: 18px]; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
                     "extend": [
                         {
                             "extension": ".enroute",
