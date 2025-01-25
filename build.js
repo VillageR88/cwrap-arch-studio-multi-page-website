@@ -967,6 +967,7 @@ function generateCssSelector(
   passover = [],
   omit = []
 ) {
+  if (propsMap.has("12")) console.log(propsMap);
   let selector = parentSelector;
   if (jsonObj.element) {
     if (omit.includes(jsonObj["omit-id"])) {

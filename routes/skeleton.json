@@ -318,7 +318,7 @@
           "mediaQueries": [
             {
               "query": "max-width: 768px",
-              "style": "border-box; margin-block: 72px 168px; padding-inline: 32px;"
+              "style": "box-sizing: border-box; margin-block: 72px 168px; padding-inline: 32px;"
             }
           ],
           "style": "display: flex; flex-direction: column; gap: 64px; margin-block: 200px; min-height: 696px;",

@@ -6,10 +6,57 @@
         "mediaQueries": [
             {
                 "query": "max-width: 768px",
-                "style": "padding: 0;"
+                "style": "padding: 0;",
+                "extend": [
+                    {
+                        "extension": ":has(nav > div > label > input:checked)",
+                        "style": "overflow-y: clip; min-height: unset;"
+                    }
+                ]
             }
         ],
         "children": [
+            {
+                "element": "div",
+                "attributes": {
+                    "role": "dialog",
+                    "aria-label": "Mobile Menu"
+                },
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "extend": [
+                            {
+                                "extension": ":has(+ nav > div > label > input:checked)",
+                                "style": "opacity: 1; pointer-events: auto; user-select: auto;"
+                            },
+                            {
+                                "extension": ":has(+ nav > div > label > input:checked) > div",
+                                "style": "transform: translateX(0%);"
+                            }
+                        ]
+                    }
+                ],
+                "style": "transition: opacity 500ms; top: 99px; position: absolute; pointer-events: none; display: flex; user-select: none; opacity: 0; justify-content: end; overflow-x: clip; background-color: rgba(0,0,0,0.5); width: 100%; height: 100%; z-index: 2;",
+                "children": [
+                    {
+                        "element": "div",
+                        "style": "transition: 500ms; margin-left: 32px; width: 100%; gap: 24px; background-color: #EEEFF4; max-height: 232px; display: flex; flex-direction: column; overflow-y: auto; overflow-x: clip; justify-content: space-between; transform: translateX(100%);",
+                        "children": [
+                            {
+                                "element": "div",
+                                "style": "margin-block: 39px 42px; margin-inline: 48px; display: flex; flex-direction: column; ",
+                                "children": [
+                                    {
+                                        "element": "cwrap-template",
+                                        "text": "cwrapTemplate[navigation(768Navigation=margin:0; flex-direction: column; width: fit-content; gap: 17px; navAlternate=color: red;)]"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
             {
                 "element": "cwrap-template",
                 "text": "cwrapTemplate[nav(768Navigation=display: none)]"
@@ -101,7 +148,7 @@
         "mediaQueries": [
             {
                 "query": "max-width: 768px",
-                "style": "padding-top: 32px; padding-inline: 32px;"
+                "style": "padding-top: 32px; padding-inline: 32px; box-sizing: border-box;"
             }
         ],
         "children": [
@@ -137,6 +184,53 @@
                     {
                         "element": "cwrap-template",
                         "text": "cwrapTemplate[navigation]"
+                    },
+                    {
+                        "element": "label",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "display: unset;",
+                                "extend": [
+                                    {
+                                        "extension": ":has(input:checked) > img:nth-of-type(1)",
+                                        "style": "display: none;"
+                                    },
+                                    {
+                                        "extension": ":not(:has(input:checked)) > img:nth-of-type(2)",
+                                        "style": "display: none;"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "display: none; z-index: 2;",
+                        "attributes": {
+                            "for": "menuToggle"
+                        },
+                        "children": [
+                            {
+                                "element": "img",
+                                "attributes": {
+                                    "src": "cwrapProperty[prefix=./]static/images/icons/icon-hamburger.svg",
+                                    "id": "menuIcon"
+                                }
+                            },
+                            {
+                                "element": "img",
+                                "attributes": {
+                                    "src": "cwrapProperty[prefix=./]static/images/icons/icon-close.svg",
+                                    "id": "closeIcon"
+                                }
+                            },
+                            {
+                                "element": "input",
+                                "style": "position: absolute; opacity: 0;",
+                                "attributes": {
+                                    "type": "checkbox",
+                                    "id": "menuToggle"
+                                }
+                            }
+                        ]
                     }
                 ]
             }
@@ -170,7 +264,7 @@
                 {
                     "element": "a",
                     "text": "cwrapArray[Portfolio,About Us,Contact]",
-                    "style": "color: #7D828F; font-size: 18px; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
+                    "style": "cwrapProperty[navAlternate=color: #7D828F; font-size: 18px;]; font-weight: bold; line-height: 25px; text-decoration: none; transition: 300ms;",
                     "extend": [
                         {
                             "extension": ".enroute",
@@ -201,6 +295,12 @@
             {
                 "element": "svg",
                 "style": "fill: cwrapProperty[logoFill=#1B1D23]; height: fit-content; width: cwrapProperty[svgWidth=cwrapOmit]",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 768px",
+                        "style": "max-width: 77px;"
+                    }
+                ],
                 "attributes": {
                     "xmlns": "http://www.w3.org/2000/svg",
                     "width": "97",
@@ -444,7 +544,7 @@
                             },
                             {
                                 "query": "max-width: 768px",
-                                "style": "margin-top: -45px; z-index: 2; background-color: #FFFFFF; margin-inline: 0; padding-left: 32px;"
+                                "style": "margin-top: -45px; z-index: 1; background-color: #FFFFFF; margin-inline: 0; padding-left: 32px;"
                             }
                         ],
                         "children": [

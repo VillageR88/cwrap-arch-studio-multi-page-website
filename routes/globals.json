@@ -35,12 +35,24 @@
     {
       "name": "html",
       "type": "element",
-      "style": "overflow-x: clip; scroll-behavior: smooth;"
+      "style": "overflow-x: clip; scroll-behavior: smooth;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "overflow-x: unset;"
+        }
+      ]
     },
     {
       "name": "body",
       "type": "element",
-      "style": "overflow-x: clip; scroll-behavior: smooth;"
+      "style": "overflow-x: clip; scroll-behavior: smooth;",
+      "mediaQueries": [
+        {
+          "query": "max-width: 768px",
+          "style": "overflow-x: unset;"
+        }
+      ]
     },
     {
       "name": "h1",
