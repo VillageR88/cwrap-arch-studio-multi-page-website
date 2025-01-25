@@ -14,14 +14,26 @@
             {
                 "element": "footer",
                 "style": "display: flex; align-self: center; margin-top: auto; max-width: 1110px; min-height: 200px; width: calc(100% + 97px * 2);",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 1280px",
+                        "style": "min-height: 110px;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "div",
                         "style": "align-items: center; background-color: #1B1D23; display: flex; justify-content: center; max-width: 200px; width: 100%;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 1280px",
+                                "style": "max-width: 120px;"
+                            }
+                        ],
                         "children": [
                             {
                                 "element": "cwrap-template",
-                                "text": "cwrapTemplate[logo(logoFill=white)]"
+                                "text": "cwrapTemplate[logo(logoFill=white,svgWidth=58px)]"
                             }
                         ]
                     },
@@ -96,6 +108,12 @@
         "element": "ul",
         "name": "navigation",
         "style": "align-items: center; box-sizing: border-box; display: flex; list-style: none; margin: cwrapProperty[margin=0]; padding: 0;",
+        "mediaQueries": [
+            {
+                "query": "max-width: 1280px",
+                "style": "margin: 0 0 0 40px"
+            }
+        ],
         "blueprint": {
             "element": "li",
             "style": "margin-left: cwrapArray[cwrapOmit, 61px, 51px];",
@@ -134,11 +152,12 @@
         "children": [
             {
                 "element": "svg",
-                "style": "fill: cwrapProperty[logoFill=#1B1D23]",
+                "style": "fill: cwrapProperty[logoFill=#1B1D23]; height: fit-content; width: cwrapProperty[svgWidth=cwrapOmit]",
                 "attributes": {
                     "xmlns": "http://www.w3.org/2000/svg",
                     "width": "97",
-                    "height": "40"
+                    "height": "40",
+                    "viewBox": "0 0 97 40"
                 },
                 "children": [
                     {
@@ -311,15 +330,33 @@
             {
                 "element": "h1",
                 "text": "cwrapGlobal[cwrapProperty[heroSource=about-us].hero.h1]",
-                "style": "color: #EEEFF4; position: absolute; right: 0; top: 130px; z-index: 1;"
+                "style": "color: #EEEFF4; position: absolute; right: 0; top: 130px; z-index: 1;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 1280px",
+                        "style": "top: 204px;"
+                    }
+                ]
             },
             {
                 "element": "div",
                 "style": "background-color: #FFFFFF; bottom: 0; display: flex; max-width: 628px; min-height: 503px; position: absolute; right: 0; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 1280px",
+                        "style": "max-width: fit-content; min-height: 431px;"
+                    }
+                ],
                 "children": [
                     {
                         "element": "div",
                         "style": "margin: auto auto 2px 182px; max-width: 446px;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 1280px",
+                                "style": "margin-inline: 59px 0;"
+                            }
+                        ],
                         "children": [
                             {
                                 "element": "div",

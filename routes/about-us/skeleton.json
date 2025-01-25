@@ -26,6 +26,12 @@
             {
               "element": "div",
               "style": "display: flex; flex-direction: column; max-width: 446px; white-space: pre-wrap;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "margin-inline: auto; max-width: 640px;"
+                }
+              ],
               "children": [
                 {
                   "element": "div",
@@ -45,6 +51,12 @@
             },
             {
               "element": "img",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "display: none;"
+                }
+              ],
               "attributes": {
                 "src": "../cwrapGlobal[about-us.heritage.image]",
                 "alt": "cwrapGlobal[about-us.heritage.title] image"
@@ -55,6 +67,12 @@
         {
           "element": "div",
           "style": "display: flex; justify-content: space-between; margin-block: 200px 159px;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 1280px",
+              "style": "flex-direction: column; gap: 49px; margin-inline: auto;"
+            }
+          ],
           "children": [
             {
               "element": "h2",
@@ -63,10 +81,22 @@
             },
             {
               "element": "div",
-              "style": "display: flex; flex-wrap: wrap; gap: 63px 30px; max-width: 730px;",
+              "style": "display: grid; gap: 63px 30px; grid-template-columns: repeat(2, auto); max-width: 730px; width: 100%;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "max-width: 640px;"
+                }
+              ],
               "blueprint": {
                 "count": "4",
                 "element": "div",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 1280px",
+                    "style": "max-width: 280px;"
+                  }
+                ],
                 "style": "display: flex; flex-direction: column; gap: 15px;",
                 "children": [
                   {
@@ -91,6 +121,7 @@
                       },
                       {
                         "element": "img",
+                        "style": "display: flex; height: 100%; width: 100%;",
                         "attributes": {
                           "src": "../cwrapGlobal[about-us.leaders.gallery.cwrapIndex.src]",
                           "alt": "cwrapGlobal[about-us.leaders.gallery.cwrapIndex.title] image"
